@@ -165,7 +165,7 @@ MN1 EAZY VPS address:port masternodegenkey masternodeoutputs (see example)
 
 * The Masternode Setup is confirmed and you should receive first rewards in less than 30 minutes. To check the status of your masternode within the EAZY Masternode VPS use the command below:
 
-`./eazy-cli masternode status`
+`/usr/local/bin/eazy-cli masternode status`
 
  ***
 
