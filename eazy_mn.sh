@@ -38,11 +38,11 @@ read DOSETUPTWO
 
 if [[ $DOSETUPTWO =~ "y" ]] ; then
 
-eazy-cli stop > /dev/null 2>&1
+sudo eazy-cli stop > /dev/null 2>&1
 sleep 3
-wget http://95.179.146.176/eazy/eazyd -O /usr/local/bin/eazyd
-wget http://95.179.146.176/eazy/eazy-cli -O /usr/local/bin/eazy-cli
-chmod +x /usr/local/bin/eazy*
+sudo wget http://95.179.146.176/eazy/eazyd-113 -O /usr/local/bin/eazyd
+sudo wget http://95.179.146.176/eazy/eazy-cli-113 -O /usr/local/bin/eazy-cli
+sudo chmod +x /usr/local/bin/eazy*
 fi
 
 echo ""
@@ -78,19 +78,18 @@ CONF_DIR=~/.eazy/
 CONF_FILE=eazy.conf
 PORT=9982
 
-mkdir -p $CONF_DIR
-echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` > $CONF_DIR/$CONF_FILE
-echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> $CONF_DIR/$CONF_FILE
-echo "rpcallowip=127.0.0.1" >> $CONF_DIR/$CONF_FILE
-echo "rpcport=9983" >> $CONF_DIR/$CONF_FILE
-echo "listen=1" >> $CONF_DIR/$CONF_FILE
-echo "server=1" >> $CONF_DIR/$CONF_FILE
-echo "daemon=1" >> $CONF_DIR/$CONF_FILE
-echo "logtimestamps=1" >> $CONF_DIR/$CONF_FILE
-echo "masternode=1" >> $CONF_DIR/$CONF_FILE
-echo "port=$PORT" >> $CONF_DIR/$CONF_FILE
-echo "mastenodeaddr=$IP:$PORT" >> $CONF_DIR/$CONF_FILE
-echo "masternodeprivkey=$PRIVKEY" >> $CONF_DIR/$CONF_FILE
+sudo mkdir -p $CONF_DIR
+sudo echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` > $CONF_DIR/$CONF_FILE
+sudo echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> $CONF_DIR/$CONF_FILE
+sudo echo "rpcallowip=127.0.0.1" >> $CONF_DIR/$CONF_FILE
+sudo echo "rpcport=9983" >> $CONF_DIR/$CONF_FILE
+sudo echo "listen=1" >> $CONF_DIR/$CONF_FILE
+sudo echo "server=1" >> $CONF_DIR/$CONF_FILE
+sudo echo "daemon=1" >> $CONF_DIR/$CONF_FILE
+sudo echo "logtimestamps=1" >> $CONF_DIR/$CONF_FILE
+sudo echo "masternode=1" >> $CONF_DIR/$CONF_FILE
+sudo echo "port=$PORT" >> $CONF_DIR/$CONF_FILE
+sudo echo "mastenodeaddr=$IP:$PORT" >> $CONF_DIR/$CONF_FILE
+sudo echo "masternodeprivkey=$PRIVKEY" >> $CONF_DIR/$CONF_FILE
 
-eazyd -daemon
-
+sudo eazyd -daemon
