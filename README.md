@@ -5,7 +5,7 @@ This guide is designed for a EAZY Mastenode Setup.
 If you require further assistance, feel free to contact our team @ [Discord](https://discord.gg/V2gKBhw)
 ***
 ## Requirements
-**1,000 EAZY** [BUY](https://discord.gg/V2gKBhw)
+**2,000 EAZY** [BUY](https://discord.gg/V2gKBhw)
 
 **EAZY Masternode VPS** [BUY](https://www.vultr.com)
 
@@ -119,7 +119,7 @@ and confirm with "yes".
 
 ***Step 2***
 
-* Send exactly 1000 EAZY to your new generated address "MN1"!
+* Send exactly 2000 EAZY to your new generated address "MN1"!
 
 ![sendcollateral](https://i.imgur.com/WFOhzu8.png)
 
